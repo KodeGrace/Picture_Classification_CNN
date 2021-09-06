@@ -10,4 +10,4 @@ Learning Picture Classification with CNN
 2. Keras Library
 3. Tensorflow Library
 
-**And I want to say thank you to dicoding.com for platform academy online**
+**And I want to say thank you to dicoding.com for online platform academy**
