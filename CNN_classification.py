@@ -56,13 +56,13 @@ test_datagen = ImageDataGenerator(
                     fill_mode = 'nearest')
                     
 train_generator = train_datagen.flow_from_directory(
-        train_dir,  # direktori data latih
+        train_dir,  
         target_size=(150, 150),
         class_mode='categorical')
 print(train_generator.class_indices)
 
 validation_generator = test_datagen.flow_from_directory(
-        validation_dir, # direktori data validasi
+        validation_dir, 
         target_size=(150, 150),
         class_mode='categorical')
 print(validation_generator.class_indices)
@@ -99,8 +99,8 @@ model.compile(optimizer='SGD',
               
 history = model.fit(
       train_generator,
-      steps_per_epoch=25,  # berapa batch yang akan dieksekusi pada setiap epoch
+      steps_per_epoch=25,  
       epochs=15,
-      validation_data=validation_generator, # menampilkan akurasi pengujian data validasi
-      validation_steps=5,  # berapa batch yang akan dieksekusi pada setiap epoch
+      validation_data=validation_generator, 
+      validation_steps=5,  
       verbose=2)
